@@ -10,8 +10,10 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Run a multi-line script
-      run: |
-        sudo apt install gfortran
+      run: 
+        sudo apt install gfortran 1,2> junk
         make
+        echo 'time ./sum'
         time ./sum
+        echo 'time .cor'
         time ./cor
