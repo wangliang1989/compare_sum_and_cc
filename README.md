@@ -1,4 +1,4 @@
-# compare_sum_and_cc
+# Compare_sum_and_cc
 
 This repo tries to prove that the CC is much more time consuming than summation.
 
@@ -12,7 +12,7 @@ make
 
 ## Check the time consuming
 
-We can use the command `time` to check the time, and my result is:
+We can use the command `time` to check the time, and my result on Centos is:
 
 ```bash
 ➜  compare_sum_and_cc git:(master) time ./cor
