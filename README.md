@@ -25,10 +25,10 @@ My result on a Lenovo PC with Centos is:
 My result on my Macbook Pro is:
 
 ```bash
-➜  compare_sum_and_cc git:(master) time  ./cor
-./cor  298.25s user 23.36s system 88% cpu 6:04.85 total
-➜  compare_sum_and_cc git:(master) time ./sum
-./sum  16.91s user 0.01s system 79% cpu 21.313 total
+liang@Pathfinder ~/work/compare_sum_and_cc ±master » time ./sum
+./sum  172.15s user 3.17s system 85% cpu 3:24.68 total
+liang@Pathfinder ~/work/compare_sum_and_cc ±master » time ./cor
+./cor  2889.51s user 39.92s system 91% cpu 53:04.69 total
 ```
 
 My result on a VPS with Ubuntu:
