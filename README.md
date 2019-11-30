@@ -14,24 +14,43 @@ make
 
 We can use the command `time` to check the time.
 
-My result on a Lenovo PC with Centos is: 
+3 times tests on Lenovo PC with Centos: 
 
 ```bash
-➜  compare_sum_and_cc git:(master) time ./sum
-./sum  215.30s user 0.18s system 83% cpu 4:19.54 total
 ➜  compare_sum_and_cc git:(master) time ./cor
-./cor  3664.67s user 279.84s system 89% cpu 1:13:18.37 total
+./cor  48.87s user 1.97s system 89% cpu 56.927 total
+➜  compare_sum_and_cc git:(master) time ./cor
+./cor  49.83s user 2.06s system 85% cpu 1:00.98 total
+➜  compare_sum_and_cc git:(master) time ./cor
+./cor  49.67s user 2.05s system 85% cpu 1:00.50 total
+➜  compare_sum_and_cc git:(master) time ./sum
+./sum  2.07s user 0.00s system 85% cpu 2.435 total
+➜  compare_sum_and_cc git:(master) time ./sum
+./sum  2.02s user 0.00s system 87% cpu 2.328 total
+➜  compare_sum_and_cc git:(master) time ./sum
+./sum  2.09s user 0.00s system 72% cpu 2.899 total
 ```
-My result on my Macbook Pro is:
+3 times tests on Macbook Pro:
 
 ```bash
-liang@Pathfinder ~/work/compare_sum_and_cc ±master » time ./sum
-./sum  172.15s user 3.17s system 85% cpu 3:24.68 total
 liang@Pathfinder ~/work/compare_sum_and_cc ±master » time ./cor
-./cor  2889.51s user 39.92s system 91% cpu 53:04.69 total
+./cor  38.71s user 0.60s system 92% cpu 42.556 total
+liang@Pathfinder ~/work/compare_sum_and_cc ±master » time ./cor
+./cor  37.92s user 0.47s system 96% cpu 39.811 total
+liang@Pathfinder ~/work/compare_sum_and_cc ±master » time ./cor
+./cor  37.98s user 0.46s system 95% cpu 40.396 total
+liang@Pathfinder ~/work/compare_sum_and_cc ±master » time ./sum
+./sum  1.59s user 0.02s system 96% cpu 1.672 total
+liang@Pathfinder ~/work/compare_sum_and_cc ±master » time ./sum
+./sum  1.50s user 0.02s system 97% cpu 1.559 total
+liang@Pathfinder ~/work/compare_sum_and_cc ±master » time ./sum
+./sum  1.56s user 0.02s system 96% cpu 1.641 total
 ```
 
-The "user" is the time of the User Mode.
+The "user" is the time of the User Mode. This is just what we need.
+
 The "system" is the time of the System Mode.
+
 The "total" is the real time.
+
 The "cpu" means cpu_usage = (user_time + sys_time)/total * 100%
