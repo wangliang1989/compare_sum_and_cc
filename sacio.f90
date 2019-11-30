@@ -199,9 +199,10 @@ if (flag /= 0) then
    return
 end if
 close(unit=50)
+i = 1
 do while (i <= size(data))
     if ((data(i) /= data(i)) .OR. (data(i) == (data(i) - 1))) then
-            data(i) = 0
+        data(i) = 0
     end if
     i = i + 1
 end do
