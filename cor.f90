@@ -13,7 +13,7 @@ call sacio_readsac(file, headx, x, flag)
 deallocate(file)
 file = "y.sac"
 call sacio_readsac(file, heady, y, flag)
-do i = 1, 123456
+do i = 1, 1234567
     npts = size(x)-size(y)+1
     call sacio_newhead(head, headx%delta, npts, headx%b - heady%e + (heady%npts - 1) * headx%delta)
     call sub_norm(norm, x, y, size(y), npts)
