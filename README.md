@@ -31,14 +31,6 @@ liang@Pathfinder ~/work/compare_sum_and_cc ±master » time ./cor
 ./cor  2889.51s user 39.92s system 91% cpu 53:04.69 total
 ```
 
-My result on a VPS with Ubuntu:
-```bash
-➜  compare_sum_and_cc git:(master) time ./sum
-./sum  212.58s user 0.23s system 94% cpu 3:45.75 total
-➜  compare_sum_and_cc git:(master) time ./cor
-./cor  3989.87s user 292.20s system 96% cpu 1:13:47.86 total
-```
-
 The "user" is the time of the User Mode.
 The "system" is the time of the System Mode.
 The "total" is the real time.
