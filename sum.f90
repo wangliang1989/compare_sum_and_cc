@@ -10,7 +10,7 @@ real :: stk, dip, rak, az, sstk, sdip, srak, sstk2, sdip2, cstk, cdip, crak, cst
 
 file = "x.sac"
 call sacio_readsac(file, head, data, flag)
-do i = 1, 1234567
+do i = 1, 123456
     stk = 45
     dip = 45
     rak = 45

@@ -19,10 +19,9 @@ subroutine sub_cor(x, y, norm, result, flag)
     npts = nx - ny + 1
     allocate(result(1 : npts))
     allocate(cor(1 : npts))
-    forall(i=1:npts)
-        cor(i) = sum(x(i:i+ny-1)*y(1:ny))
-    end forall
-    result = cor / norm
+    do i=1, npts
+        cor(i) = sum(x(i:i+ny-1)*y(1:ny)) / norm(i)
+    end do
 end subroutine sub_cor
 
 subroutine sub_norm(norm, x, y, ny, npts)
