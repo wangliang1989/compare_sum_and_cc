@@ -25,21 +25,20 @@ subroutine sub_cor(x, y, norm, result, flag)
     result = cor / norm
 end subroutine sub_cor
 
-subroutine sub_norm(norm, x, ny, npts)
+subroutine sub_norm(norm, x, y, ny, npts)
     implicit none
     real, allocatable, dimension(:), intent(out) :: norm
-    real, allocatable, dimension(:), intent(in) :: x
+    real, allocatable, dimension(:), intent(in) :: x, y
     integer, intent(in) :: ny, npts
     integer :: i, j
 
     allocate(norm(1 : npts))
     do i=1, npts
-        norm(i) = sum(x(i:i+ny-1) * x(i:i+ny-1))
+        norm(i) = sqrt (sum(x(i:i+ny-1) * x(i:i+ny-1)) * sum (y(1:ny) * y(1:ny)))
         if (norm(i) == 0) then
             norm(i) = 1
         end if
     end do
-    norm = sqrt(norm)
 end subroutine sub_norm
 
 end module module_cor
